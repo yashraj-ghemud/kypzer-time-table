@@ -386,7 +386,7 @@
 <div class="wrap">
   <div class="panel">
     <label>enter your schedule</label>
-    <textarea id="rawInput">3:45pm : i will come to room , 3:50 to 5 pm : work , 5:00 to 7 pm : call to wife , 7 to 8 pm work , 9 to 10 pm gym, 10 to 10.30 pm work , 10.30 to 1 pm call to lavuu</textarea>
+    <textarea id="rawInput" placeholder="3:45pm : come to room , 3:50 to 5 pm : work , 5:00 to 7 pm : call to wife ..."></textarea>
     <p class="hint">Format flexible hai &mdash; <b>"3 to 5 pm : work"</b> ya <b>"3:45pm : work"</b> ya bina colon ke bhi chalega. Comma ya new line se entries alag karo.</p>
     <div class="actions">
       <button class="btn-primary" onclick="generate()">&#9889; Generate Table</button>
@@ -946,8 +946,7 @@ function insertWatermarkFooter(clone){
   clone.appendChild(footer);
 }
 
-// auto-generate on load
-window.addEventListener('DOMContentLoaded', generate);
+// empty on load — user fills data themselves
 </script>
 </body>
 </html>
