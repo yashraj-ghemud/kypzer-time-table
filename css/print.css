@@ -1,0 +1,22 @@
+/* Print: a clean A4 timetable of the current day. */
+@page { size: A4; margin: 14mm; }
+html, body { background: #fff !important; color: #111 !important; }
+#stage, .atmo, .grain, #cursor, .nav, .app-top, .pane-editor, .pane-insights > :not(.stats):not(.breakdown), .mobile-tabs, #view-landing, #view-focus, .toasts, #wipe, .gate, .intro-ui, .modal-backdrop, .palette-wrap, .pane-head .seg, .progress-chip, .tl-check, .badge.guess, .tl-nowline, .dg-help { display: none !important; }
+#view-app { display: block !important; padding: 0 !important; }
+.workspace { display: block !important; }
+.pane { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; backdrop-filter: none !important; }
+.pane::before { display: none; }
+.pane-view::before { content: 'KYPZER · My day'; display: block; font: 700 20px 'Space Grotesk', sans-serif; margin-bottom: 12px; color: #111; position: static; background: none; height: auto; opacity: 1; }
+.tl::before { background: #999 !important; }
+.tl-card { background: #fff !important; border: 1px solid #ccc !important; box-shadow: none !important; break-inside: avoid; }
+.tl-card::before { box-shadow: none !important; }
+.tl-title, .tl-time, .tl-dur { color: #111 !important; }
+.tl-sub, .tl-time small { color: #555 !important; }
+.tl-ic { background: #f3f3f3 !important; border-color: #ddd !important; }
+.tl-item::before { box-shadow: none !important; }
+.tl-dur { background: #f5f5f5 !important; border-color: #ddd !important; }
+.stat { border-color: #ccc !important; background: #fff !important; }
+.stat .num { color: #111 !important; }
+.bar-track { border-color: #ccc !important; background: #eee !important; }
+.bar-fill::after { display: none; }
+* { animation: none !important; transition: none !important; }

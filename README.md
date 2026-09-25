@@ -1,101 +1,126 @@
 <p align="center">
-  <img src="./.github/readme-assets/signal.gif" alt="Animated signal / product visual for kypzer-time-table" width="100%" />
+  <img src="docs/screenshots/intro-logo.jpg" alt="KYPZER intro — the logo assembled from 1,440 minute-particles" width="100%">
 </p>
 
-<h1 align="center">kypzer-time-table</h1>
+<h1 align="center">KYPZER — Time Engine</h1>
 
-<p align="center"><strong>A single-file static UI (kypzer-table) consisting of a polished dark-themed HTML layout with detailed inline CSS and a CDN import of html2canvas.</strong></p>
+<p align="center"><b>Your day has 1,440 minutes. Type it like a text message — get a plan that actually fits.</b></p>
 
-<p align="center"><code>REPO//SIGNAL</code> · <code>SIGNAL / PRODUCT</code> · <code>LOOPING README EXPERIENCE</code></p>
+<p align="center">
+  English + Hinglish natural-language planner · clash detection & one-click fixes · energy-aware auto-scheduling ·
+  Focus mode · calendar (.ics), image, link & QR export · week timetables · offline PWA · cinematic 3D intro
+</p>
 
-## Live signal
-
-| Lens | Readout |
-| --- | --- |
-| Portfolio lane | **SIGNAL / PRODUCT** |
-| Code surface | **1** tracked files observed |
-| Primary materials | **HTML** |
-| Verification | **0** test-related files observed |
-
-> A moving scan of the project surface. The animated frame above is a lightweight visual signature; the sections below remain the source of truth for implementation details.
-
-## Motion map
-
-`SIGNAL` → `SHAPE` → `RELEASE`
-
-Use the animated banner as the first signal, then move into the implementation dossier. The recommended next step is to verify the documented setup command against the repository scripts before extending the project.
-
-<details open>
-<summary><strong>Open the full project dossier</strong></summary>
-
-## Overview
-A single-page static front-end delivered as index.html. The file contains a dark-themed, animated layout implemented with CSS variables and keyframe animations, uses multiple Google Fonts from a CDN, and loads html2canvas from a CDN. There is no evidence of build tooling, separate JS/CSS files, backend services, tests, or other repository manifests in the supplied dossier.
-
-## What it does
-- Renders a visually rich hero/branding layout with animated background elements (blurred orbs and grid) and design-token-driven colors.
-- Includes a CDN import of html2canvas (suggesting an intent to capture or export the DOM as an image).
-- Provides a responsive scaffold (meta viewport present) and developer-credit UI element using JetBrains Mono.
-
-## Key capabilities
-- Dark themed responsive layout scaffold.
-- Animated background grid and blurred color orbs via CSS keyframes.
-- Design tokens implemented with CSS variables for color theming.
-- Web fonts loaded from Google Fonts (Orbitron, Inter, JetBrains Mono, Space Grotesk).
-- html2canvas included from a CDN (cdnjs.cloudflare.com).
-
-## Technology
-- HTML (index.html)
-- CSS (inline within index.html; variables + animations)
-- Google Fonts (via fonts.googleapis.com)
-- html2canvas (via CDN: cdnjs.cloudflare.com)
-
-## Repository structure
-- index.html — single top-level file containing markup, inline CSS, and the external script/font references.
-
-No other files (assets, package manifests, tests, CI configs, or LICENSE) were present in the supplied repository evidence.
-
-## Getting started
-- There is no build system or npm/yarn manifest in the repository evidence.
-- To preview the UI: open index.html directly in a modern browser, or serve the repository folder with any static file server and navigate to the served index.html.
-- To inspect the implementation, open index.html in a text editor — the page contains the styling and external CDN references inline.
-
-## Configuration
-- The page uses CSS variables defined in index.html to control colors and theme tokens.
-- Fonts are loaded from Google Fonts; html2canvas is loaded from cdnjs.cloudflare.com. No Subresource Integrity (SRI) attributes or crossorigin attributes were found in the supplied evidence.
-- There are no configuration files (package.json, .env, or similar) present in the dossier.
-
-## Development and quality notes
-- The codebase is a single-file static front-end with inline CSS. Consider extracting CSS and any future JavaScript into separate files for maintainability.
-- No application JavaScript or interactive timetable markup was found in the supplied file; html2canvas is included but no wiring code for export/capture is present in the evidence.
-- There are no tests, linting, or CI configuration files in the provided dossier.
-- Security-related observations from the supplied files:
-  - Third-party fonts and html2canvas are loaded from CDNs without SRI or integrity attributes.
-  - Heavy use of inline styles could limit some CSP protections if a CSP is not applied by the hosting environment.
-  - No CSP, CORS, or other HTTP security headers are present in repository files (deployment configuration not included in the dossier).
-
-Recommended improvements (based on the current single-file state):
-- Add README, LICENSE, and .gitignore to improve repository hygiene.
-- Add SRI and crossorigin attributes for CDN imports and document recommended CSP headers for deployments.
-- Introduce semantic timetable markup and a small JS file to wire html2canvas to an “export” control.
-- Separate inline CSS into a dedicated stylesheet (assets/styles.css) and any behavior into assets/app.js.
-
-## Safety and responsible use
-- Loading third-party scripts and fonts from CDNs without SRI increases the risk of supply-chain tampering. Add integrity attributes and use crossorigin where appropriate.
-- Inline styling and the lack of a documented CSP reduce built-in protection against cross-site scripting if this file is deployed without secure headers. Document and configure a CSP at deployment time to mitigate this risk.
-
-## Contributing
-- The supplied repository evidence includes only index.html. To start contributing, inspect and modify index.html locally.
-- Suggested first contributions:
-  - Add a README.md (this file is intended to be a starting point).
-  - Add a LICENSE and .gitignore.
-  - Extract inline CSS into an assets stylesheet and add a small JavaScript file to demonstrate html2canvas usage.
-  - Add SRI attributes for CDN resources and document recommended CSP headers.
-- Contributions can be made through the repository’s normal GitHub workflow (issues and pull requests).
-
-(There was no explicit LICENSE file present in the supplied dossier, so no license is declared here.)
-
-</details>
+<p align="center"><code>dev : yashraj ghemud</code> · remaster of <b>kypzer-table</b> v1 (preserved in <code>kypzer-time-table-main.zip</code>)</p>
 
 ---
 
-<p align="center"><sub>README motion system · visual layer by RepoSignal · implementation details remain project-specific</sub></p>
+## What changed from v1
+
+v1 was a single HTML file: type `3:45pm : come to room, 3:50 to 5 pm : work, 5:00 to 7 pm : call to wife`, get a
+timeline and a PNG. v2 keeps that idea — **type your day like you'd text it** — and builds a real product around it.
+The full analysis, product thinking and the intro "screenplay" are in **[PLAN.md](PLAN.md)**.
+
+| Real-world problem | What KYPZER does |
+|---|---|
+| Calendar apps are slow to fill | Live natural-language parsing in **English and Hinglish** (`subah 7 baje gym`, `sadhe 3 se 5 baje tak padhai`, `lunch at 1 for 45 min`, `report 1h before 6pm !`), with syntax highlighting of exactly what was understood |
+| Plans are unrealistic | **Day Score** (Focus · Recovery · Balance) + insights: clashes, 4-hour marathons, no lunch, short sleep, deep work in an energy dip — most with a **one-click fix** |
+| "When do I do my tasks?" | **Auto-scheduler** fits flexible tasks (`study 2h`) into free time, respecting deadlines, priority and your **chronotype** energy curve |
+| Plans don't survive reality | **Focus mode**: live countdown, up next, done/skip, **+5 min** that pushes what follows, **running late** shifts the rest of the day, notifications, screen wake-lock, synthesized ambience |
+| Students retype their class timetable | **Week mode** (`mon-fri 9 to 10am : maths`, `somvar 5pm tuition`) → weekly grid, auto-merged into every day, exported as **recurring calendar events** |
+| Getting the plan anywhere | **.ics** for Google/Apple/Outlook, story/square/wide **image cards** (drawn natively, no screenshots), **share links** that carry the whole plan, **QR** to move it to your phone, WhatsApp text, print |
+| Privacy & bad networks | **Local-first PWA**: no account, no server, works offline, backup/restore |
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Landing hero with the live 3D engine](docs/screenshots/landing.jpg) | ![Planner: editor, timeline, insights](docs/screenshots/planner.jpg) |
+| ![Drag-and-drop day grid](docs/screenshots/grid.jpg) | ![Dial 3D view](docs/screenshots/dial.jpg) |
+| ![Focus mode](docs/screenshots/focus.jpg) | ![Share & export: story card](docs/screenshots/export.jpg) |
+
+## The intro film
+
+A ~17-second real-time film (Three.js, custom shaders, procedural WebAudio — no video or audio files):
+**chaos → order → engine → you.** 1,440 glowing motes (one per minute) drift with words from a messy day,
+get pulled into a 24-hour ring, the watch movement comes alive while the hand sweeps a whole day, the camera
+dives through the ring, the motes stream past and assemble **KYPZER**, and the film ends synced to your real clock:
+*"It's 3:47 PM. You have 493 minutes left today."* — then it becomes the website without a cut.
+
+![The engine mid-film](docs/screenshots/intro-engine.jpg)
+
+First visit only (a gate unlocks sound), skippable with <kbd>Esc</kbd>, replayable from the footer,
+and replaced by a short fade under `prefers-reduced-motion`.
+
+## Run it
+
+No build step — static files and native ES modules (three.js is vendored, so it works offline).
+
+```bash
+npx serve .                 # or: python -m http.server 5173
+# open http://localhost:5173
+```
+
+Opening `index.html` directly from disk won't work (browsers block ES modules on `file://`; the page tells you so).
+Deploying = uploading the folder (GitHub Pages works as-is).
+
+```bash
+npm test                    # 22 engine unit tests (node:test) — parser, resolver, scheduler, analyzer, ICS, share, QR decode
+npm run e2e                 # Playwright smoke test of the real UI (needs playwright installed)
+```
+
+Debug helpers: `?fx=low` forces the low-quality 3D path, `?introAt=12` freezes the film at a given second.
+
+## Grammar cheatsheet
+
+```
+3:45pm : come to room          point (ends when the next thing starts)
+3:50 to 5 pm : work            range — "5 pm" tells the engine 3:50 is PM too
+gym 6-7am  |  17:00–19:00 gym  task-first, 24h, dashes
+lunch at 1 for 45 min          start + duration
+study 2h   |  padhai 2 ghante  flexible → auto-placed at a good time
+report 1h before 6pm !         deadline + priority (! / !! / urgent)
+then coding 90m                right after the previous block
+work till 5                    from the previous block until 5
+subah / dopahar / shaam / raat, sadhe · paune · sava · dedh · dhai, baje, se … tak
+mon-fri 9 to 10am : maths      week mode (also: weekdays, daily, somvar … ravivar)
+```
+
+Guessed AM/PM is marked with **?** — tap to flip. Every visual edit (drag, resize, fixes, running late) rewrites
+the exact line in your text, so the text stays the single source of truth and <kbd>Ctrl</kbd>+<kbd>Z</kbd> works.
+
+## Keyboard
+
+<kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd> command palette · <kbd>/</kbd> edit · <kbd>F</kbd> focus mode ·
+<kbd>T</kbd>/<kbd>G</kbd>/<kbd>D</kbd> timeline / grid / dial · <kbd>D</kbd> in focus = done · <kbd>Esc</kbd> back
+
+## Architecture
+
+```
+index.html            shell: gate, intro overlay, landing, planner, focus, shared views
+css/                  base · components · intro · landing · app · focus · print
+src/engine/           pure logic (runs in Node too): lexicon, parser, resolver, scheduler,
+                      analyzer, energy, week, format, plan pipeline, ics, share, qr
+src/core/             store (localStorage), router (clock-wipe transitions), sound (WebAudio synth), dom
+src/ui/               editor, timeline, day grid, week grid, dial view, insights, focus, export,
+                      card renderer, palette, settings, history, shared view
+src/three/            engine object (GPU particle morphs, watch movement, plan arcs) + stage (post FX)
+src/intro/            the film director
+src/landing/          scroll choreography, live demos, cursor
+vendor/three/         three.js r170 (MIT)
+sw.js, manifest       offline PWA
+tests/, scripts/      unit tests, e2e, asset renderer
+```
+
+Pipeline on every keystroke: `text → parse → resolve (AM/PM) → + weekly routine → schedule → analyze → render`.
+
+## Accessibility & performance
+
+Keyboard reachable everywhere, focus-trapped dialogs, labelled controls, `prefers-reduced-motion` respected
+(and a manual override), no information conveyed by colour alone. The 3D stage pauses off-screen, caps pixel
+ratio and degrades quality within seconds on slow GPUs; the planner never depends on WebGL.
+
+## Credits
+
+Design & development: **yashraj ghemud** · powered by the kypzer engine · three.js (MIT) · fonts: Orbitron, Inter,
+JetBrains Mono, Space Grotesk (Google Fonts). The energy curve is a typical pattern, not medical advice.
